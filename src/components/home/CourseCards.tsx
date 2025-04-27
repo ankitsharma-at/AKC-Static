@@ -11,14 +11,7 @@ const CourseCards: React.FC = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Discover high-quality courses taught by industry experts designed to help you achieve your goals.
           </p>
-          <div className="mt-6 flex flex-wrap gap-2 justify-center">
-            <button className="px-4 py-2 bg-blue-600 text-white rounded-full text-sm font-medium">All Courses</button>
-            <button className="px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm font-medium hover:bg-gray-200">Programming</button>
-            <button className="px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm font-medium hover:bg-gray-200">Data Science</button>
-            <button className="px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm font-medium hover:bg-gray-200">Design</button>
-            <button className="px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm font-medium hover:bg-gray-200">Business</button>
-            <button className="px-4 py-2 bg-gray-100 text-gray-800 rounded-full text-sm font-medium hover:bg-gray-200">Marketing</button>
-          </div>
+          
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -71,13 +64,14 @@ const CourseCards: React.FC = () => {
                     />
                     <span className="text-sm font-medium text-gray-700">{course.instructor}</span>
                   </div>
-                  <div className="font-bold text-lg text-blue-600">${course.price}</div>
+                  <div className="*:font-bold text-lg text-blue-600">Rs{course.price}</div>
                 </div>
               </div>
               <div className="px-6 py-4 bg-gray-50 border-t border-gray-100">
+                <a href='https://api.whatsapp.com/send?phone=9351433289&text=i want to learn more about ' target='_main'>
                 <button className="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors duration-300">
                   Learn More
-                </button>
+                </button></a>
               </div>
             </div>
           ))}

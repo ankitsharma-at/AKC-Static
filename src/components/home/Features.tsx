@@ -10,7 +10,7 @@ const Features: React.FC = () => {
             Why Choose Us
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Learn With EduSphere
+            Learn With Arvindam ki class
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Our platform offers the best learning experience with expert instructors and comprehensive resources.

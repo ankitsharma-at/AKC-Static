@@ -9,26 +9,26 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center mb-4">
-              <BookOpen className="h-8 w-8 text-blue-400" />
-              <span className="text-xl font-bold ml-2">EduSphere</span>
+              
+              <span className="text-xl font-bold ml-2">ArvindamKiClass Pvt Ltd</span>
             </div>
             <p className="text-gray-400 mb-4">
               Transforming education through technology and innovation. Join our global community of learners today.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+              <a href="https://www.facebook.com/share/15jj7vxSXo/" target="_main" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
-                <Twitter size={20} />
+              <a href="#" target="_main" className="text-gray-400 hover:text-blue-400 transition-colors duration-300 font-extrabold">
+                X
               </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+              <a href="https://www.instagram.com/arvin_dam?igsh=MWNhbW42aW1tMXFscg==" target="_main" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+              <a href="https://www.instagram.com/arvin_dam?igsh=MWNhbW42aW1tMXFscg==" target="_main" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+              <a href="https://youtube.com/@arvindamkiclass427?si=d62LFS_JPg1rso8B" target="_main" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
                 <Youtube size={20} />
               </a>
             </div>
@@ -66,15 +66,15 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-blue-400 mr-2 mt-0.5" />
-                <span className="text-gray-400">123 Education St, Academic City, CA 94102</span>
+                <span className="text-gray-400">Arvindam ki Class Pvt Ltd, Kalyanpura Road, Village-Karoi, Bhilwara</span>
               </li>
               <li className="flex items-center">
                 <PhoneCall className="h-5 w-5 text-blue-400 mr-2" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
+                <span className="text-gray-400">+91 9351433289</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-blue-400 mr-2" />
-                <span className="text-gray-400">info@edusphere.com</span>
+                <span className="text-gray-400">Arvindamkiclass999@gmail.com</span>
               </li>
             </ul>
           </div>

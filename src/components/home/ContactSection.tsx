@@ -206,15 +206,18 @@ const ContactSection: React.FC = () => {
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Support</h3>
                 <p className="text-gray-600 mb-2">Get support via email within 24 hours</p>
                 <a href="mailto:support@edusphere.com" className="text-blue-600 font-medium hover:text-blue-700">
-                  support@edusphere.com
+                  Arvindamkiclass999@gmail.com
                 </a>
               </div>
               
               <div className="bg-white p-6 rounded-xl shadow-md">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone Support</h3>
                 <p className="text-gray-600 mb-2">Available Monday to Friday, 9AM-5PM</p>
-                <a href="tel:+15551234567" className="text-blue-600 font-medium hover:text-blue-700">
-                  +1 (555) 123-4567
+                <a href="tel:+919351433289" className="text-blue-600 font-medium hover:text-blue-700">
+                  +91 9351433289
+                </a><br></br>
+                <a href="tel:+9189499773315" className="text-blue-600 font-medium hover:text-blue-700">
+                  +91 8949977315
                 </a>
               </div>
             </div>

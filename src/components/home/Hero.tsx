@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
               {/* <img 
                 src="https://res.cloudinary.com/danqalwag/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1745669174/IMG-20250426-WA0005-removebg-preview_uwiuer.png" 
                 alt="Students learning together"  */}
-                <video className="w-full h-64 object-cover object-center" loop autoPlay>
+                <video className="w-full h-64 object-cover object-center" loop autoPlay playsInline>
                   <source src='https://res.cloudinary.com/danqalwag/video/upload/v1745736624/hxllumwczgxztke4bxhl.mp4' type='video/mp4' />
                 </video>
                
@@ -47,6 +47,7 @@ const Hero: React.FC = () => {
                 <div className="flex items-center mb-4">
                   <div className="h-2 w-2 rounded-full bg-green-500 mr-2"></div>
                   <span className="text-green-600 text-sm font-medium"> Classes Available</span>
+                 <a href='https://api.whatsapp.com/send?phone=9351433289&text='><span className='bg-green-500 p-3 rounded-full ml-20 text-white animate-bounce'>Apply now</span></a> 
                 </div>
                 <h3 className="text-xl font-bold mb-1">Tally Prime GST(Accounting Expert Course)</h3>
                 <p className="text-gray-600 mb-4">Learn in-demand skills in Computerised Accounting, Finance, Administration and discover nre career opportunities</p>
@@ -61,7 +62,7 @@ const Hero: React.FC = () => {
                       +3k
                     </div>
                   </div>
-                  <span className="text-blue-600 font-bold">Rs. 5999.99</span>
+                  <span className="text-blue-600 font-bold">Rs. 7500</span>
                  
                 </div>
                  <div className='mt-6 flex items-center justify-center'>

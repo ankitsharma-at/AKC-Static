@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu, BookOpen } from 'lucide-react';
+import { Menu, BookOpen ,Linkedin} from 'lucide-react';
 
 interface NavbarProps {
   toggleSidebar: () => void;
@@ -33,9 +33,9 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
           </div>
           
         </div>
-      </div>
-    </nav>
+      </div></nav>
   );
 };
+
 
 export default Navbar;
