@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu, BookOpen ,Linkedin} from 'lucide-react';
+import { Menu} from 'lucide-react';
 
 interface NavbarProps {
   toggleSidebar: () => void;
@@ -8,12 +8,12 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+      <div className="max-w-7xl mx-auto px-4 ">
+        <div className="flex justify-between h-16 items-center">
           <div className="flex items-center">
             <button
               onClick={toggleSidebar}
-              className="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 lg:hidden"
+              className="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 "
             >
               <span className="sr-only">Open sidebar</span>
               <Menu className="h-6 w-6" />
@@ -31,9 +31,14 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
             <a href="#faq" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">FAQ</a>
             <a href="#contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contact</a>
           </div>
-          
+          <div className='items-center'>
+        <a href="https://hits.sh/ankitsharma-at.github.io/AKC-Static/"><img alt="Hits" src="https://hits.sh/ankitsharma-at.github.io/AKC-Static.svg?label=Visitors&color=11cc85&labelColor=000000"/></a>
         </div>
-      </div></nav>
+        </div>
+      
+      </div> 
+      
+      </nav>
   );
 };
 

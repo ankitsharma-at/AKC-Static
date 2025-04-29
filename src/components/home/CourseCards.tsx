@@ -68,7 +68,7 @@ const CourseCards: React.FC = () => {
                 </div>
               </div>
               <div className="px-6 py-4 bg-gray-50 border-t border-gray-100">
-                <a href='https://api.whatsapp.com/send?phone=9351433289&text=i want to learn more about ' target='_main'>
+                <a href={`https://api.whatsapp.com/send?phone=9351433289&text=i want to learn more about${course.title} `} target='_main'>
                 <button className="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors duration-300">
                   Learn More
                 </button></a>

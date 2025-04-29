@@ -15,12 +15,12 @@ const Hero: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div className="z-10">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fadeIn">
-              Expand Your Skills, <br />
-              <span className="text-blue-200">Elevate Your Future</span>
+            आपकी सफलता,
+            <br />
+              <span className="text-blue-200"> हमारी जिम्मेदारी !</span>
             </h1>
             <p className="text-xl text-blue-100 mb-8 max-w-lg animate-fadeIn animation-delay-150">
-              Discover expert-led courses across tech, business, creative, and more. 
-              Join thousands of students learning on Arvindam ki Class today.
+            हमारे साथ जुड़ें और अपने करियर को उन्नति की ओर ले जाएं, जानते हुए कि आपकी सफलता हमारी प्राथमिकता है।
             </p>
             <div className="flex flex-wrap gap-4 animate-fadeIn animation-delay-300">
              <a href="#courses"> <button className="px-6 py-3 bg-white text-blue-700 rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
@@ -34,20 +34,23 @@ const Hero: React.FC = () => {
          
           </div>
           <div className="relative z-10 lg:ml-10 animate-fadeIn animation-delay-600">
+             <div className='bg-lime-600 rounded-s-md flex items-center justify-center text-lg text-violet-50 font-bold animate-bounce '>Tally hai to Career Set Hai !</div>
             <div className="bg-white rounded-xl shadow-2xl overflow-hidden">
+             
               {/* <img 
                 src="https://res.cloudinary.com/danqalwag/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1745669174/IMG-20250426-WA0005-removebg-preview_uwiuer.png" 
                 alt="Students learning together"  */}
-                <video className="w-full h-64 object-cover object-center" loop autoPlay playsInline>
+                <video className="w-full h-64 object-cover object-center" loop autoPlay muted>
                   <source src='https://res.cloudinary.com/danqalwag/video/upload/v1745736624/hxllumwczgxztke4bxhl.mp4' type='video/mp4' />
                 </video>
                
               
               <div className="p-6 bg-white text-gray-800">
-                <div className="flex items-center mb-4">
+                <div className="flex min-w-full  justify-around mb-4"> 
+                  <span className="text-green-600 text-sm font-medium flex items-center">
                   <div className="h-2 w-2 rounded-full bg-green-500 mr-2"></div>
-                  <span className="text-green-600 text-sm font-medium"> Classes Available</span>
-                 <a href='https://api.whatsapp.com/send?phone=9351433289&text='><span className='bg-green-500 p-3 rounded-full ml-20 text-white animate-bounce'>Apply now</span></a> 
+                  Classes Available</span>
+                <span className='bg-green-500 p-3 items-end rounded-full  text-white animate-bounce '> <a href='https://api.whatsapp.com/send?phone=9351433289&text='>Apply now</a></span>
                 </div>
                 <h3 className="text-xl font-bold mb-1">Tally Prime GST(Accounting Expert Course)</h3>
                 <p className="text-gray-600 mb-4">Learn in-demand skills in Computerised Accounting, Finance, Administration and discover nre career opportunities</p>

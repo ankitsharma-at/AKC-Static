@@ -105,7 +105,7 @@ const ContactSection: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="bg-gray-50 rounded-2xl p-8 md:p-12">
-            <form onSubmit={handleSubmit}>
+            <form class={"gform"} method='POST' data-email="ankittiwari7742@gmail.com" action='https://script.google.com/macros/s/AKfycbxiRwfhU4yWCIlfOtp2n3gkaiQzGuemAHVVA18dzauRWBwFZeKoCE2YQekmkPSgWVY1/exec' onSubmit={handleSubmit}>
               <div className="mb-6">
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
                 <div className="relative">
@@ -205,7 +205,7 @@ const ContactSection: React.FC = () => {
               <div className="bg-white p-6 rounded-xl shadow-md">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Support</h3>
                 <p className="text-gray-600 mb-2">Get support via email within 24 hours</p>
-                <a href="mailto:support@edusphere.com" className="text-blue-600 font-medium hover:text-blue-700">
+                <a href="mailto:Arvindamkiclass999@gmail.com" className="text-blue-600 font-medium hover:text-blue-700">
                   Arvindamkiclass999@gmail.com
                 </a>
               </div>
