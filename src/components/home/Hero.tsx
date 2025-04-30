@@ -1,3 +1,4 @@
+// import { FaYoutube, FaWhatsapp } from "react-icons/fa";
 import React from 'react';
 import { PlayCircle } from 'lucide-react';
 
@@ -5,7 +6,7 @@ const Hero: React.FC = () => {
   return (
     <section className="relative bg-gradient-to-r from-blue-600 to-purple-700 text-white overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
+      <div className=" inset-0 opacity-10">
         <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-purple-500"></div>
         <div className="absolute top-40 -left-20 w-60 h-60 rounded-full bg-blue-400"></div>
         <div className="absolute bottom-20 right-20 w-40 h-40 rounded-full bg-indigo-500"></div>
@@ -26,12 +27,13 @@ const Hero: React.FC = () => {
              <a href="#courses"> <button className="px-6 py-3 bg-white text-blue-700 rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 Browse Courses
               </button></a>
+              <a href='https://youtu.be/B1RdjnQ0xqo?si=s_HSO8S2DoUy94ra' target='_main'>
               <button className="px-6 py-3 bg-transparent border-2 border-white rounded-lg font-medium hover:bg-white/10 transition-all duration-300 flex items-center">
                 <PlayCircle className="mr-2 h-5 w-5" />
                 Watch Demo
-              </button>
+              </button></a>
             </div>
-         
+        
           </div>
           <div className="relative z-10 lg:ml-10 animate-fadeIn animation-delay-600">
              <div className='bg-lime-600 rounded-s-md flex items-center justify-center text-lg text-violet-50 font-bold animate-bounce '>Tally hai to Career Set Hai !</div>
@@ -52,7 +54,7 @@ const Hero: React.FC = () => {
                   Classes Available</span>
                 <span className='bg-green-500 p-3 items-end rounded-full  text-white animate-bounce '> <a href='https://api.whatsapp.com/send?phone=9351433289&text='>Apply now</a></span>
                 </div>
-                <h3 className="text-xl font-bold mb-1">Tally Prime GST(Accounting Expert Course)</h3>
+                <h3 className="text-xl font-bold mb-1">Tally Prime GST(Accounting Expert Course) ONLINE</h3>
                 <p className="text-gray-600 mb-4">Learn in-demand skills in Computerised Accounting, Finance, Administration and discover nre career opportunities</p>
                 <div className="flex justify-between items-center">
                   <div className="flex -space-x-2">
@@ -65,7 +67,7 @@ const Hero: React.FC = () => {
                       +3k
                     </div>
                   </div>
-                  <span className="text-blue-600 font-bold">Rs. 7500</span>
+                  <span className="text-blue-600 font-bold">Rs. 4499.0</span>
                  
                 </div>
                  <div className='mt-6 flex items-center justify-center'>
@@ -74,20 +76,72 @@ const Hero: React.FC = () => {
                     </button></a>
                   </div>
               </div>
-            </div>
+            </div>  
             {/* Course card stacked effect */}
             <div className="absolute -bottom-10 -left-10 right-10 top-10 border-2 border-blue-300 rounded-xl -z-10 opacity-70"></div>
             <div className="absolute -bottom-5 -left-5 right-5 top-5 border-2 border-purple-300 rounded-xl -z-10 opacity-70"></div>
           </div>
         </div>
       </div>
+      {/* promotion section */}
+     
+    
+
+
+    <div className="flex justify-between flex-col md:flex-row gap-20 p-6  rounded-xl shadow-lg max-w-5xl mx-auto mt-10">
+      
+      {/* Left: eBook Card */}
+      <a href="https://rzp.io/l/SWQOb0iY"
+          target="_main" >
+      <div className="flex-1 bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center text-black max-w-md justify-center ">
+        <div className='bg-green-500 rounded-md flex items-center justify-center text-lg text-violet-50 font-bold animate-bounce w-full '>New Launch e-book!</div>
+        <img
+          src="https://res.cloudinary.com/danqalwag/image/upload/v1746031116/IMG-20250430-WA0002_tr6xrt.jpg"
+          alt="Book Cover"
+          className="rounded-lg mb-4 w-40 h-auto"
+        />
+        <h2 className="text-xl font-bold mb-2">Notes for MICROSOFT WORD, EXEL ,POWERPOINT</h2>
+        <p className="text-gray-600 mb-4 text-lg">Only ₹49</p>
+        
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition">Buy Now</button> 
+         </div> 
+        </a>
+      
+
+      {/* Right: Channel Links */}
+      <div className="flex-1 bg-slate-100 rounded-xl shadow-md p-6 flex flex-col justify-center items-center text-center gap-4 text-black">
+        <h2 className="text-xl  font-semibold mb-4">Follow Us</h2>
+        <div className="bg-white rounded-lg shadow-lg p-7 flex justify-center items-center text-center">
+        <a
+          href=" https://youtube.com/@arvindamkiclass427?si=d62LFS_JPg1rso8B"
+          target="_blank"
+          
+          className="flex items-center justify-center gap-3 bg-red-600 hover:bg-red-700 text-white py-3 px-6 rounded-2xl w-full text-lg font-medium transition"
+        >
+         <i className="fa fa-youtube text-4xl text-white my-float m-2"></i>
+          Visit YouTube Channel
+        </a></div>
+        <div className=" bg-white rounded-lg shadow-md p-6 flex justify-center items-center text-center">
+        <a
+          href="https://whatsapp.com/channel/0029VaIXYNV42DceFIICHv0K"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-2xl w-full text-lg font-medium transition"
+        >
+          <i className="fa fa-whatsapp text-4xl text-white my-float m-2"></i>
+          Join WhatsApp Channel
+        </a></div>
+      </div>
+    </div>
+
       
       {/* Wave separator */}
-      <div className="absolute bottom-0 left-0 right-0">
+      <div className=" ">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full h-auto">
           <path fill="#ffffff" fillOpacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,138.7C960,139,1056,117,1152,117.3C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
         </svg>
       </div>
+      
     </section>
   );
 };

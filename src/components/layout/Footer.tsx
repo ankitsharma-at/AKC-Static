@@ -15,6 +15,9 @@ const Footer: React.FC = () => {
             <p className="text-gray-400 mb-4">
               Transforming education through technology and innovation. Join our global community of learners today.
             </p>
+            <div className='my-4'>
+            <a href="https://hits.sh/ankitsharma-at.github.io/AKC-Static/"><img alt="website visitors" src="https://hits.sh/ankitsharma-at.github.io/AKC-Static.svg?style=for-the-badge&label=website%20visitors&color=187bee"/></a>
+            </div>
             <div className="flex space-x-4">
               <a href="https://www.facebook.com/share/15jj7vxSXo/" target="_main" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
                 <Facebook size={20} />
@@ -32,6 +35,7 @@ const Footer: React.FC = () => {
                 <Youtube size={20} />
               </a>
             </div>
+            
           </div>
 
           {/* Quick Links */}

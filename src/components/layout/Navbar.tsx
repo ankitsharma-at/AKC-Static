@@ -31,9 +31,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
             <a href="#faq" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">FAQ</a>
             <a href="#contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contact</a>
           </div>
-          <div className='items-center'>
-        <a href="https://hits.sh/ankitsharma-at.github.io/AKC-Static/"><img alt="Hits" src="https://hits.sh/ankitsharma-at.github.io/AKC-Static.svg?label=Visitors&color=11cc85&labelColor=000000"/></a>
-        </div>
+          
         </div>
       
       </div> 
