@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
             </p>
             <div className="flex flex-wrap gap-4 animate-fadeIn animation-delay-300">
              <a href="#courses"> <button className="px-6 py-3 bg-white text-blue-700 rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                Browse Courses
+                Skill Courses By Arvind Sir
               </button></a>
               <a href='https://youtu.be/B1RdjnQ0xqo?si=s_HSO8S2DoUy94ra' target='_main'>
               <button className="px-6 py-3 bg-transparent border-2 border-white rounded-lg font-medium hover:bg-white/10 transition-all duration-300 flex items-center">

@@ -1,6 +1,8 @@
 
 import { useState } from 'react';
 import { Home } from './pages/Home';
+import { Routes, Route } from 'react-router-dom';
+import CourseDetails from './pages/CourseDetails';
 import Navbar from './components/layout/Navbar';
 import Sidebar from './components/layout/Sidebar';
 import Footer from './components/layout/Footer';
@@ -18,7 +20,12 @@ function App() {
       <div className="flex flex-1">
         <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
         <main className="flex-1 ">
-          <Home />
+          
+          <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/courses/:id" element={<CourseDetails />} />
+    </Routes>
+
         </main>
       </div>
       <Footer />

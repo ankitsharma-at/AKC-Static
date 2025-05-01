@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Menu} from 'lucide-react';
 
 interface NavbarProps {
@@ -20,17 +21,20 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
             </button>
             <a href="/" className="flex items-center space-x-2 ml-2 lg:ml-0">
               <img src='https://res.cloudinary.com/danqalwag/image/upload/v1745669174/IMG-20250426-WA0005-removebg-preview_uwiuer.png' className='bg-transparent h-14'></img>
-              <span className="text-xl font-bold text-gray-900">Arvindam ki Class</span>
+              <span className="text-xl font-bold text-gray-900">Arvindam Ki Class</span>
             </a>
           </div>
-          <div className="hidden lg:flex lg:items-center lg:space-x-8">
-            <a href="#" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Home</a>
-            <a href="#courses" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Courses</a>
-            <a href="#features" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Features</a>
-            <a href="#gallery" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Gallery</a>
-            <a href="#faq" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">FAQ</a>
-            <a href="#contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contact</a>
-          </div>
+          
+
+     <div className="hidden lg:flex lg:items-center lg:space-x-8">
+  <Link to="/#" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Home</Link>
+  <Link to="/#courses" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Courses</Link>
+  <Link to="/#features" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Features</Link>
+  <Link to="/#gallery" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Gallery</Link>
+  <Link to="/#faq" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">FAQ</Link>
+  <Link to="/#contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contact</Link>
+</div>
+
           
         </div>
       

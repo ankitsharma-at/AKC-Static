@@ -5,9 +5,11 @@ export interface Course {
   image: string;
   category: string;
   instructor: string;
+  medium: string;
   price: number;
   rating: number;
   students: number;
+  payLink: string;
 }
 
 export interface Feature {

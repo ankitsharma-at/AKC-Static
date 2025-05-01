@@ -7,7 +7,7 @@ const ContactSection: React.FC = () => {
     email: '',
     message: ''
   });
-  
+
   const [errors, setErrors] = useState({
     name: '',
     email: '',
@@ -19,31 +19,21 @@ const ContactSection: React.FC = () => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
-    
-    // Clear error when typing
+    setFormData({ ...formData, [name]: value });
+
     if (errors[name as keyof typeof errors]) {
-      setErrors({
-        ...errors,
-        [name]: ''
-      });
+      setErrors({ ...errors, [name]: '' });
     }
   };
 
   const validateForm = () => {
     let valid = true;
-    const newErrors = { ...errors };
-    
-    // Validate name
+    const newErrors = { name: '', email: '', message: '' };
+
     if (!formData.name.trim()) {
       newErrors.name = 'Name is required';
       valid = false;
     }
-    
-    // Validate email
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
       valid = false;
@@ -51,40 +41,37 @@ const ContactSection: React.FC = () => {
       newErrors.email = 'Email is invalid';
       valid = false;
     }
-    
-    // Validate message
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required';
       valid = false;
     }
-    
+
     setErrors(newErrors);
     return valid;
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (validateForm()) {
       setIsSubmitting(true);
-      
-      // Simulate form submission
-      setTimeout(() => {
-        setIsSubmitting(false);
-        setSubmitSuccess(true);
-        
-        // Reset form
-        setFormData({
-          name: '',
-          email: '',
-          message: ''
+      const form = e.target as HTMLFormElement;
+      const data = new FormData(form);
+
+      fetch('/', {
+        method: 'POST',
+        body: data,
+      })
+        .then(() => {
+          setIsSubmitting(false);
+          setSubmitSuccess(true);
+          setFormData({ name: '', email: '', message: '' });
+          setTimeout(() => setSubmitSuccess(false), 3000);
+        })
+        .catch(() => {
+          setIsSubmitting(false);
+          alert('There was a problem submitting the form.');
         });
-        
-        // Reset success message after 3 seconds
-        setTimeout(() => {
-          setSubmitSuccess(false);
-        }, 3000);
-      }, 1500);
     }
   };
 
@@ -105,7 +92,16 @@ const ContactSection: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="bg-gray-50 rounded-2xl p-8 md:p-12">
-            <form class={"gform"} method='POST' data-email="ankittiwari7742@gmail.com" action='https://script.google.com/macros/s/AKfycbxiRwfhU4yWCIlfOtp2n3gkaiQzGuemAHVVA18dzauRWBwFZeKoCE2YQekmkPSgWVY1/exec' onSubmit={handleSubmit}>
+            <form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              onSubmit={handleSubmit}
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <input type="hidden" name="bot-field" />
+              
               <div className="mb-6">
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
                 <div className="relative">
@@ -118,13 +114,14 @@ const ContactSection: React.FC = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className={`block w-full pl-10 pr-3 py-3 border ${errors.name ? 'border-red-500' : 'border-gray-300'} rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500`}
+                    className={`block w-full pl-10 pr-3 py-3 border ${errors.name ? 'border-red-500' : 'border-gray-300'} rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500`}
                     placeholder="John Doe"
+                    required
                   />
                 </div>
                 {errors.name && <p className="mt-1 text-sm text-red-600">{errors.name}</p>}
               </div>
-              
+
               <div className="mb-6">
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
                 <div className="relative">
@@ -137,13 +134,14 @@ const ContactSection: React.FC = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className={`block w-full pl-10 pr-3 py-3 border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500`}
+                    className={`block w-full pl-10 pr-3 py-3 border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500`}
                     placeholder="john@example.com"
+                    required
                   />
                 </div>
                 {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
               </div>
-              
+
               <div className="mb-6">
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Your Message</label>
                 <div className="relative">
@@ -156,13 +154,14 @@ const ContactSection: React.FC = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows={5}
-                    className={`block w-full pl-10 pr-3 py-3 border ${errors.message ? 'border-red-500' : 'border-gray-300'} rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500`}
+                    className={`block w-full pl-10 pr-3 py-3 border ${errors.message ? 'border-red-500' : 'border-gray-300'} rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500`}
                     placeholder="How can we help you?"
+                    required
                   />
                 </div>
                 {errors.message && <p className="mt-1 text-sm text-red-600">{errors.message}</p>}
               </div>
-              
+
               <button
                 type="submit"
                 disabled={isSubmitting}
@@ -185,7 +184,7 @@ const ContactSection: React.FC = () => {
                   </>
                 )}
               </button>
-              
+
               {submitSuccess && (
                 <div className="mt-4 p-3 bg-green-100 border border-green-400 text-green-700 rounded">
                   Thank you! Your message has been sent successfully.
@@ -200,7 +199,6 @@ const ContactSection: React.FC = () => {
               alt="Support team" 
               className="rounded-2xl shadow-lg w-full h-auto"
             />
-            
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="bg-white p-6 rounded-xl shadow-md">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Support</h3>
@@ -209,13 +207,12 @@ const ContactSection: React.FC = () => {
                   Arvindamkiclass999@gmail.com
                 </a>
               </div>
-              
               <div className="bg-white p-6 rounded-xl shadow-md">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone Support</h3>
                 <p className="text-gray-600 mb-2">Available Monday to Friday, 9AM-5PM</p>
                 <a href="tel:+919351433289" className="text-blue-600 font-medium hover:text-blue-700">
                   +91 9351433289
-                </a><br></br>
+                </a><br />
                 <a href="tel:+9189499773315" className="text-blue-600 font-medium hover:text-blue-700">
                   +91 8949977315
                 </a>
@@ -223,15 +220,6 @@ const ContactSection: React.FC = () => {
             </div>
           </div>
         </div>
-
-        {/* Supabase Integration Comment */}
-        {/* 
-          Supabase Integration:
-          - Store contact form submissions in Supabase database
-          - Implement email notifications using edge functions
-          - Create admin dashboard for managing support tickets
-          - Track and prioritize support requests
-        */}
       </div>
     </section>
   );
