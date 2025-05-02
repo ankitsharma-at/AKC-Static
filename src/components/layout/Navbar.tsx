@@ -28,11 +28,11 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
 
      <div className="hidden lg:flex lg:items-center lg:space-x-8">
   <Link to="/#" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Home</Link>
-  <Link to="/#courses" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Courses</Link>
-  <Link to="/#features" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Features</Link>
-  <Link to="/#gallery" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Gallery</Link>
-  <Link to="/#faq" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">FAQ</Link>
-  <Link to="/#contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contact</Link>
+  <Link to="/?scrollTo=courses" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Courses</Link>
+  <Link to="/?scrollTo=features" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Features</Link>
+  <Link to="/?scrollTo=gallery" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Gallery</Link>
+  <Link to="/?scrollTo=faq" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">FAQ</Link>
+  <Link to="/?scrollTo=contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contact</Link>
 </div>
 
           

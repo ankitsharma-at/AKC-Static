@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Twitter, Instagram, Linkedin, Youtube, Mail, PhoneCall, MapPin, BookOpen } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Youtube, Mail, PhoneCall, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (

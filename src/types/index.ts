@@ -10,6 +10,7 @@ export interface Course {
   rating: number;
   students: number;
   payLink: string;
+  demo: string;
 }
 
 export interface Feature {

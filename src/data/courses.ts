@@ -12,7 +12,8 @@ export const courses: Course[] = [
     price: 4200,
     rating: 4.8,
     students: 2345,
-         payLink: '',
+    demo:'',
+    payLink: '',
   },
   {
     id: 2,
@@ -25,7 +26,8 @@ export const courses: Course[] = [
     price: 7500,
     rating: 4.9,
     students: 1898,
-         payLink: '',
+    demo:'',
+    payLink: '',
   },
   {
     id: 3,
@@ -35,10 +37,11 @@ export const courses: Course[] = [
     category: "Open Exam",
     instructor: "",
     medium:'OFFLINE' ,
-    price:0,
+    price:5499,
     rating: 4.7,
     students: 1245,
-         payLink: '',
+    demo:'', 
+    payLink: '',
   },
   {
     id: 4,
@@ -82,12 +85,13 @@ Lesson 30 – Use of ChatGPT in Excel
 `,
     image: "https://res.cloudinary.com/danqalwag/image/upload/v1746126339/IMG-20250501-WA0000_tjnep1.jpg",
     category: "EXEL",
-    instructor: "Sarah Williams",
+    instructor: "Arvind Tripathi",
     medium:'ONLINE',
-    price: 299.99,
+    price: 199.99,
     rating: 4.6,
     students: 987,
-     payLink: 'https://rzp.io/rzp/Z4TLOkl',  
+    demo:'https://res.cloudinary.com/danqalwag/video/upload/v1746207940/30-Days-Excel-Crash-Course_mjtx7y.mp4',
+    payLink: 'https://rzp.io/rzp/Z4TLOkl',  
     }
   // {
   //   id: 5,
@@ -99,7 +103,8 @@ Lesson 30 – Use of ChatGPT in Excel
   //   price: 94.99,
   //   rating: 4.8,
   //   students: 1543,
-   //    payLink: '',
+   
+  //demo:'',    payLink: '',
   // },
   // {
   //   id: 6,
@@ -111,6 +116,7 @@ Lesson 30 – Use of ChatGPT in Excel
   //   price: 84.99,
   //   rating: 4.7,
   //   students: 1123,
-   //    payLink: '',
+   
+  //demo:'',    payLink: '',
   // }
 ];

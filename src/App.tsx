@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Home } from './pages/Home';
 import { Routes, Route } from 'react-router-dom';
-import CourseDetails from './pages/CourseDetails';
+import CourseDetails, { ScrollToTop } from './pages/CourseDetails';
 import Navbar from './components/layout/Navbar';
 import Sidebar from './components/layout/Sidebar';
 import Footer from './components/layout/Footer';
@@ -16,6 +16,7 @@ function App() {
 
   return (
     <div className="min-h-screen flex flex-col ">
+      <ScrollToTop/>
       <Navbar toggleSidebar={toggleSidebar} />
       <div className="flex flex-1">
         <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
@@ -23,7 +24,7 @@ function App() {
           
           <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/courses/:id" element={<CourseDetails />} />
+      <Route path="/course" element={<CourseDetails />} />
     </Routes>
 
         </main>

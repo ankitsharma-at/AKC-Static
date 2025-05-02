@@ -1,5 +1,6 @@
-import React from 'react';
-import { X, BookOpen} from 'lucide-react';
+import React  from 'react';
+import { Link } from 'react-router-dom';
+import { X} from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -42,12 +43,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         </div>
        <div>
         <div className="grid lg:hidden items-center lg:space-x-8">
-            <a href="#" className="text-gray-700 hover:text-blue-600 px-14 py-2 text-lg font-medium ">Home</a>
-            <a href="#courses" className="text-gray-700 hover:text-blue-600 px-14 py-2 text-lg font-medium">Courses</a>
-            <a href="#features" className="text-gray-700 hover:text-blue-600 px-14 py-2 text-lg font-medium">Features</a>
-            <a href="#gallery" className="text-gray-700 hover:text-blue-600 px-14 py-2 text-lg font-medium">Gallery</a>
-            <a href="#faq" className="text-gray-700 hover:text-blue-600 px-14 py-2 text-lg font-medium">FAQ</a>
-            <a href="#contact" className="text-gray-700 hover:text-blue-600 px-14 py-2 text-lg font-medium">Contact</a>
+        <Link to="/#" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Home</Link>
+  <Link to="/?scrollTo=courses" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Courses</Link>
+  <Link to="/?scrollTo=features" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Features</Link>
+  <Link to="/?scrollTo=gallery" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Gallery</Link>
+  <Link to="/?scrollTo=faq" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">FAQ</Link>
+  <Link to="/?scrollTo=contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contact</Link>
           </div>
           <hr/>
           <div className='grid justify-center items-center'>

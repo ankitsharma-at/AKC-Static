@@ -1,12 +1,30 @@
-import { useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { courses } from '../data/courses';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
+
+
+
+
+export const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, [pathname]);
+
+  return null;
+};
+
+
+
 
 export default function CourseDetails() {
-  const { id } = useParams();
-  const courseId = Number(id);
-  const course = courses.find((c) => c.id === courseId);
+  const location = useLocation();
+  const query = new URLSearchParams(location.search);
+  const id = query.get("id");
+
+  const course = courses.find((c) => c.id === Number(id));
   const [showMore, setShowMore] = useState(false);
 
   if (!course) {
@@ -28,7 +46,14 @@ export default function CourseDetails() {
           <div className="bg-blue-600 text-white text-sm font-bold inline-block px-3 py-1 rounded-full mb-4 shadow">
             {course.medium} Course
           </div>
-
+          
+            { course.demo &&  
+          <div >
+            <video className="w-full h-64 object-cover object-center rounded-lg my-4" controls controlsList='nodownload' autoPlay >
+                  <source src={course.demo} type='video/mp4' />
+                </video>
+                
+          </div>}
           <h2 className="text-2xl font-bold text-green-700 leading-snug mb-4">{course.title}</h2>
 
           {/* Description with Show More */}
@@ -80,6 +105,7 @@ export default function CourseDetails() {
             <div className="bg-blue-100 text-blue-800 px-4 py-2 rounded-xl flex items-center gap-3 text-sm font-medium">
               <span className="text-lg">📜</span> You will get a Certificate of Merit
             </div>
+            { course.medium == 'ONLINE' ?  
             <a href={course.payLink} target='_main'>
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -88,6 +114,16 @@ export default function CourseDetails() {
             >
               <span className="text-lg">🛒</span> Buy Now
             </motion.button></a>
+            :
+            <a href={`https://api.whatsapp.com/send?phone=9351433289&text=i want to join in ${course.title}`} target='_main'>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+              className="mt-6 w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 rounded-xl flex items-center justify-center gap-2 transition"
+            >
+              <span className="text-lg">🛒</span> Join Now
+            </motion.button></a>
+             }
           </div>
         </div>
       </motion.div>
