@@ -58,8 +58,10 @@ const CourseCards: React.FC = () => {
            <div 
               key={course.id} 
               className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
-            >
+            ><div className='bg-green-500 my-4 rounded-md flex items-center justify-center text-lg text-violet-50 font-bold animate-bounce w-full '>{course.tagLine}
+            </div>
               <div className="relative">
+              
                 <img 
                   src={course.image} 
                   alt={course.title} 

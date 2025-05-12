@@ -52,8 +52,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
           </div>
           <hr/>
           <div className='grid justify-center items-center'>
-          <a href="https://rkcl.vmou.ac.in/" target='_main'className="text-gray-700 hover:text-blue-600  py-2 px-4 text-lg font-medium">RS-CIT result</a>
+          <a href="https://rkcl.vmou.ac.in/" target='_main'className="text-gray-700 hover:text-blue-600  py-2 px-4 text-lg font-medium">RS-CIT Result</a>
           <a href="https://www.vmou.ac.in/notices-answer-keys" target='_main' className="text-gray-700 hover:text-blue-600 px-4 py-2 text-lg font-medium">RS-CIT Answer Key</a>
+          <a href="https://ilearn.myrkcl.com/" target='_main' className="text-gray-700 hover:text-blue-600 px-4 py-2 text-lg font-medium">RS-CIT Assessment</a>
         </div>
         </div>
       </aside>

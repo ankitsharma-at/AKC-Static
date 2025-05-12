@@ -11,6 +11,7 @@ export interface Course {
   students: number;
   payLink: string;
   demo: string;
+  tagLine: string;
 }
 
 export interface Feature {

@@ -14,12 +14,13 @@ export const courses: Course[] = [
     students: 2345,
     demo:'',
     payLink: '',
+    tagLine:'सरकारी नौकरी की पहली सीढ़ी – RSCIT !'
   },
   {
     id: 2,
     title: "Tally Prime With GST (Accounting Expert Course)",
     description: "Learn in-demand skills in Computerised Accounting, Finance, Administration, and discover new career opportunities. ",
-    image: "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    image: "https://res.cloudinary.com/danqalwag/image/upload/v1747054216/IMG-20250504-WA0001_zl20py.jpg",
     category: "Accounting",
     instructor: "arvind tripathi",
     medium:'OFFLINE' ,
@@ -28,6 +29,7 @@ export const courses: Course[] = [
     students: 1898,
     demo:'',
     payLink: '',
+    tagLine:'Tally hai to Career Set Hai !'
   },
   {
     id: 3,
@@ -42,13 +44,14 @@ export const courses: Course[] = [
     students: 1245,
     demo:'', 
     payLink: '',
+    tagLine:'फेल विद्यार्थी निराश ना हों! 100% परिणाम !'
   },
   {
     id: 4,
     title: "Learn Exel in 30 Days",
     description: `Excel Micro Course / Online Course 
 
-Learn Excel With AI In 30-Days | Enroll Now Only at 299/- | Excel Micro Course For 30-Days
+Learn Excel With AI In 30-Days | Enroll Now Only at 199/- | Excel Micro Course For 30-Days
 
 What you will learn => 
 
@@ -92,6 +95,7 @@ Lesson 30 – Use of ChatGPT in Excel
     students: 987,
     demo:'https://res.cloudinary.com/danqalwag/video/upload/v1746207940/30-Days-Excel-Crash-Course_mjtx7y.mp4',
     payLink: 'https://rzp.io/rzp/Z4TLOkl',  
+    tagLine:' 30 Days Excel Crash Course By Arvind sir'
     }
   // {
   //   id: 5,
