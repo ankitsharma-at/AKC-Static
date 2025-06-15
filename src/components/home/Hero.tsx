@@ -84,8 +84,7 @@ const Hero: React.FC = () => {
         </div>
       </div>
       {/* promotion section */}
-     
-    
+      <VmouCtaBanner/>
 
 
     <div className="flex justify-between flex-col md:flex-row gap-20 p-6  rounded-xl shadow-lg max-w-5xl mx-auto mt-10">
@@ -145,5 +144,63 @@ const Hero: React.FC = () => {
     </section>
   );
 };
+
+const VmouCtaBanner = () => {
+  return (
+    <>
+      <section className="relative overflow-hidden py-10 px-4 bg-gradient-to-r from-orange-400 to-red-600 text-white rounded-md mx-6">
+        {/* Glowing line animation background */}
+        <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
+          <div className="absolute top-0 w-full h-1 bg-white animate-lineMove"></div>
+          <div className="absolute bottom-0 w-full h-1 bg-white animate-lineMove"></div>
+        </div>
+
+        <div className="max-w-4xl mx-auto z-10 relative text-center">
+          <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 text-gray-900 flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-4 animate-fadeIn border-2 border-dashed border-yellow-300">
+            <div className="flex-1 text-center sm:text-left">
+              <h3 className="text-xl sm:text-2xl font-extrabold tracking-wide">
+                🔥 VMOU Assignment 2025 Ready! Get Yours Now!
+              </h3>
+              <p className="text-base sm:text-lg text-gray-700 mt-2">
+                ✍️ अब अपनी VMOU असाइनमेंट समय पर और सही फॉर्मेट में प्राप्त करें!
+              </p>
+            </div>
+            <a
+              href="/vmou-assignments"
+              className="w-full sm:w-auto inline-block bg-gradient-to-r from-blue-600 to-indigo-700 text-white font-semibold px-6 py-3 rounded-full shadow-lg ring-2 ring-indigo-300 transition duration-300 animate-bounce"
+            >
+              Click Here / यहाँ क्लिक करें
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Add custom animation styles */}
+      <style>
+        {`
+        @keyframes lineMove {
+          0% { transform: translateX(-100%); }
+          50% { transform: translateX(100%); }
+          100% { transform: translateX(-100%); }
+        }
+        .animate-lineMove {
+          background-image: linear-gradient(to right, white, transparent);
+          animation: lineMove 4s linear infinite;
+        }
+
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+          animation: fadeIn 1s ease-out;
+        }
+        `}
+      </style>
+    </>
+  );
+};
+
+
 
 export default Hero;

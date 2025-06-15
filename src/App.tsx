@@ -6,6 +6,7 @@ import CourseDetails, { ScrollToTop } from './pages/CourseDetails';
 import Navbar from './components/layout/Navbar';
 import Sidebar from './components/layout/Sidebar';
 import Footer from './components/layout/Footer';
+import VmouAssignment from './pages/VmouAssigment';
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -25,6 +26,7 @@ function App() {
           <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/course" element={<CourseDetails />} />
+      <Route path='/vmou-assignments' element={<VmouAssignment/>}/>
     </Routes>
 
         </main>
