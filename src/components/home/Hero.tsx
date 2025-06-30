@@ -84,7 +84,7 @@ const Hero: React.FC = () => {
         </div>
       </div>
       {/* promotion section */}
-      <VmouCtaBanner/>
+      //<VmouCtaBanner/>
 
 
     <div className="flex justify-between flex-col md:flex-row gap-20 p-6  rounded-xl shadow-lg max-w-5xl mx-auto mt-10">
